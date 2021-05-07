@@ -1,0 +1,51 @@
+:root{
+  // Colores
+  --blue: #172E5F;
+  --zaffre: #2770F1;
+  --zaffre-darken: #185bd0;
+  --blue-light: #5C97FF;
+  --white: #ffffff;
+  --gray: #E5E5E5;
+  --red: #b41f27;
+
+  --color-primary: var(--blue);
+  --color-warning: var(--red);
+  --color-text: var(--color-primary);
+
+  // Background
+  --bg: var(--gray);
+  --bg-tag: var(--blue-light);
+
+  // Buttons
+  --btn-base: var(--white);
+  --btn-base-hover: var(--gray);
+  --btn-primary: var(--zaffre);
+  --btn-primary-hover: var(--zaffre-darken);
+
+  --width-card: 260px;
+  --width-input:417px;
+}
+
+$zaffre:#2770F1;
+$color-primary:#172E5F;
+
+// Fonts
+$inter: 'Inter', sans-serif;
+$roboto: 'Roboto', sans-serif;
+$font-title: $inter;
+$font-paragraph: $roboto;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+
+

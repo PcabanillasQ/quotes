@@ -1,0 +1,17 @@
+@import './variables';
+@import './mixins';
+@import './components/components';
+@import './quotes/quotes';
+@import './components/footer';
+
+
+  .container{
+    width: calc(var(--width-card) + 6rem);
+    margin: 0 auto;
+    padding: 1rem;
+    transition: all .5s ease-in-out;    
+    @include md {
+      width: calc(var(--width-card)*2 + 6rem);
+    }
+   
+  }

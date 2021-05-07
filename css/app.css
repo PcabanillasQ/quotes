@@ -1,0 +1,258 @@
+:root {
+  --blue: #172E5F;
+  --zaffre: #2770F1;
+  --zaffre-darken: #185bd0;
+  --blue-light: #5C97FF;
+  --white: #ffffff;
+  --gray: #E5E5E5;
+  --red: #b41f27;
+  --color-primary: var(--blue);
+  --color-warning: var(--red);
+  --color-text: var(--color-primary);
+  --bg: var(--gray);
+  --bg-tag: var(--blue-light);
+  --btn-base: var(--white);
+  --btn-base-hover: var(--gray);
+  --btn-primary: var(--zaffre);
+  --btn-primary-hover: var(--zaffre-darken);
+  --width-card: 260px;
+  --width-input:417px;
+}
+
+.btn {
+  --base: var(--btn-base);
+  --base-hover: var(--btn-base-hover);
+  --contrast: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  border-radius: 5px;
+  width: 100%;
+  flex: 1;
+  max-width: var(--width-input);
+  padding: .7rem 2rem;
+  font-family: var(--font-paragraph);
+  background-color: var(--base);
+  color: var(--contrast);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+  border: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.btn:hover {
+  background: var(--base-hover);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .btn {
+    width: auto;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.btn span {
+  margin-left: 1rem;
+}
+
+.btn-primary {
+  --base: var(--btn-primary);
+  --base-hover: var(--btn-primary-hover);
+  --contrast: var(--white);
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin: 20% auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  animation-delay: -1.0s;
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+.header {
+  width: 80%;
+  margin: 0 auto;
+  height: 92px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 1rem;
+  align-items: center;
+}
+
+.header .logo-pcq {
+  display: flex;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+.header .logo-pcq h2 {
+  margin-left: .75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.quote__card-tag {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  width: 100px;
+  border-radius: 50px;
+  background-color: var(--bg-tag);
+  color: var(--white);
+  padding: .5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.quote__card {
+  width: var(--width-card);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  margin: 1.5rem 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.quotes-title {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 1rem;
+  font-size: 2.7rem;
+}
+
+.quotes-list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .quotes-list {
+    flex-direction: row;
+  }
+}
+
+.quotes-list > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  background-color: var(--bg);
+}
+
+.form .container {
+  transition: all .5s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .form .container {
+    text-align: center;
+  }
+}
+
+.form .container > div {
+  margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .form-search {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+
+.form .input-search {
+  flex: var(--width-input) 0;
+}
+
+@media (min-width: 768px) {
+  .form .input-search {
+    margin-right: 2rem;
+    text-align: left;
+  }
+}
+
+.form .input-search__msg {
+  font-size: 1.2rem;
+  color: var(--color-warning);
+  margin-top: .5rem;
+  display: block;
+}
+
+.form .input-search__item {
+  max-width: var(--width-input);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.form .input-search__item .material-icons {
+  position: absolute;
+  right: 2rem;
+}
+
+input {
+  width: 100%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: .7rem 5rem .7rem 1rem;
+  font-family: var(--font-paragraph);
+  border: none;
+  font-size: 1.8rem;
+  color: var(--color-text);
+  transition: all .2s ease-in-out;
+}
+
+input:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(39, 112, 241, 0.5);
+}
+
+.container {
+  width: calc(var(--width-card) + 6rem);
+  margin: 0 auto;
+  padding: 1rem;
+  transition: all .5s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: calc(var(--width-card)*2 + 6rem);
+  }
+}
+/*# sourceMappingURL=app.css.map */

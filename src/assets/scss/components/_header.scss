@@ -1,0 +1,19 @@
+.header{
+  width: 80%;
+  margin: 0 auto;
+  height: 92px;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 1rem;
+  align-items: center;
+  .logo-pcq{
+    display: flex;
+    align-items: center;
+    font-family: $font-title;
+    h2{
+      margin-left: .75rem;
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+  }
+}
